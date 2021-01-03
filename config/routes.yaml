@@ -4,3 +4,6 @@
 test:
   path: /
   controller: App\Controller\TestController::hello
+twig:
+  path: /twig
+  controller: App\Controller\TestController::twig
