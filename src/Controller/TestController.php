@@ -20,7 +20,7 @@ class TestController extends AbstractController
     {
         $message = 'Twig is a modern template engine for PHP';
 
-        return $this->render('twig.html.twig', [
+        return $this->render('index.html.twig', [
             'message' => $message,
         ]);
     }
