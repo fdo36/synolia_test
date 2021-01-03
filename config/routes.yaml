@@ -1,6 +1,10 @@
 index:
   path: /
   controller: App\Controller\TestController::hello
+  defaults:
+    twig: false
 twig:
   path: /twig
-  controller: App\Controller\TestController::twig
+  controller: App\Controller\TestController::hello
+  defaults:
+    twig: true
