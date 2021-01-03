@@ -3,13 +3,17 @@
 namespace App\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-class TestController
+
+class TestController extends AbstractController
 {
-    public function hello()
+    public function hello(): Response
     {
-        return new Response(
-            '<html><body>Hello Synolia</body></html>'
-        );
+        $message = 'Twig is a modern template engine for PHP';
+
+        return $this->render('test.html.twig', [
+            'message' => $message,
+        ]);
     }
 }
