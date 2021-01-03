@@ -7,6 +7,9 @@
     </head>
     <body>
         {% block body %}
+            <div id="header">
+                {{ block("header", "header.html.twig") }}
+            </div>
             <div id="content">
                 {% block content %}{% endblock %}
             </div>
