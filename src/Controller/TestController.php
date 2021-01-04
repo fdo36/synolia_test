@@ -21,7 +21,7 @@ class TestController extends AbstractController
         try {
             UserUtil::saveVisit($this->getDoctrine());
     
-            $message = $twig ? 'Twig is a modern template engine for PHP' : 'Hello Syniola';
+            $message = $twig ? 'Twig is a modern template engine for PHP' : 'Hello Synolia';
     
         } catch (Exception $ex) {
             $message = $ex->getMessage();
