@@ -16,3 +16,7 @@ user-view:
 user-index:
   path: /users
   controller: App\Controller\UserController::index
+
+contact:
+  path: /contact
+  controller: App\Controller\ClientController::new
