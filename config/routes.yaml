@@ -20,3 +20,9 @@ user-index:
 contact:
   path: /contact
   controller: App\Controller\ClientController::new
+
+lang:
+  path: /lang/{locale}
+  controller: App\Controller\TestController::changeLocale
+  defaults:
+    locale: en

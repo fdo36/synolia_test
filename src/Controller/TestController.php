@@ -2,11 +2,10 @@
 
 namespace App\Controller;
 
-use App\Entity\User;
 use App\Utils\UserUtil;
-use DateTime;
 use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class TestController extends AbstractController
@@ -31,5 +30,15 @@ class TestController extends AbstractController
         return $this->render('index.html.twig', [
             'message' => $message,
         ]);
+    }
+
+    public function changeLocale(Request $request, string $locale): Response
+    {
+        // not working :(
+        $request->setDefaultLocale($locale);
+        $request->setLocale($locale);
+        $request->getSession()->set('_locale', $locale);
+
+        return $this->redirectToRoute('index');
     }
 }
