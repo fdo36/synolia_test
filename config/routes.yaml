@@ -8,3 +8,11 @@ twig:
   controller: App\Controller\TestController::hello
   defaults:
     twig: true
+
+user-view:
+  path: /user/{id}
+  controller: App\Controller\UserController::view
+
+user-index:
+  path: /users
+  controller: App\Controller\UserController::index

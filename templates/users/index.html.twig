@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block style %}
+    {# this style shouldn't be here #}
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    
+    <h1>Users</h1>
+
+
+    <table>
+    <tr>
+        <th>IP entity</th>
+    </tr>
+    {% for user in users %}
+        <tr>
+            <td><a href="{{ path('user-view', {id: user.id}) }}">{{user.ip}}</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+
+
+
+
+    {% block page_contents %}{% endblock %}
+{% endblock %}
