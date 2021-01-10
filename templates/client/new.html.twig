@@ -2,6 +2,14 @@
 
 
 {% block content %}
+    <div id="header">
+        <a href="{{ path(headerTexts['HomePath']) }}">{{ headerTexts['Home'] }}</a> |
+        <a href="{{ path(headerTexts['TwigPath']) }}">{{ headerTexts['Twig'] }}</a> | 
+        <a href="{{ path(headerTexts['IPEntitiesPath']) }}">{{ headerTexts['IPEntities'] }}</a> | 
+        <a href="{{ path(headerTexts['ContactPath']) }}">{{ headerTexts['Contact'] }}</a> | 
+        <a href="{{ path(headerTexts['FrenchPath']) }}">{{ headerTexts['French'] }}</a> |
+        <a href="{{ path(headerTexts['EnglishPath']) }}">{{ headerTexts['English'] }}</a>
+    </div>
     <div style="margin-top: 20px;">
         {{ form(form) }}
     </div>

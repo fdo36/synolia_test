@@ -1,11 +1,24 @@
 index:
   path: /
-  controller: App\Controller\TestController::hello
+  controller: App\Controller\TestController::helloEn
   defaults:
     twig: false
+
 twig:
   path: /twig
-  controller: App\Controller\TestController::hello
+  controller: App\Controller\TestController::helloEn
+  defaults:
+    twig: true
+
+index-fr:
+  path: /fr/
+  controller: App\Controller\TestController::helloFr
+  defaults:
+    twig: false
+
+twig-fr:
+  path: /fr/twig
+  controller: App\Controller\TestController::helloFr
   defaults:
     twig: true
 
@@ -13,16 +26,22 @@ user-view:
   path: /user/{id}
   controller: App\Controller\UserController::view
 
+user-view-fr:
+  path: /fr/user/{id}
+  controller: App\Controller\UserController::viewFr
+
 user-index:
   path: /users
   controller: App\Controller\UserController::index
+
+user-index-fr:
+  path: /fr/users
+  controller: App\Controller\UserController::indexFr
 
 contact:
   path: /contact
   controller: App\Controller\ClientController::new
 
-lang:
-  path: /lang/{locale}
-  controller: App\Controller\TestController::changeLocale
-  defaults:
-    locale: en
+contact-fr:
+  path: /fr/contact
+  controller: App\Controller\ClientController::newFr
